@@ -4,11 +4,14 @@ import './Board.css';
 function Board({ board, onSquareClick }) {
   return (
     <section className="board-container">
-      <div 
-        className="board" 
-        role="grid" 
+      <span id="board-desc" style={{position: 'absolute', left: '-9999px'}}>
+        Click squares to make moves. Use arrow keys to navigate.
+      </span>
+      <div
+        className="board"
+        role="grid"
         aria-label="Tic tac toe game board"
-        aria-description="Click squares to make moves. Use arrow keys to navigate."
+        aria-describedby="board-desc"
       >
         {board.map((value, index) => (
           <Square
