@@ -7,8 +7,7 @@ function Board({ board, onSquareClick }) {
       <div 
         className="board" 
         role="grid" 
-        aria-label="Tic tac toe game board"
-        aria-description="Click squares to make moves. Use arrow keys to navigate."
+        aria-label="Tic tac toe game board. Click squares to make moves."
       >
         {board.map((value, index) => (
           <Square
